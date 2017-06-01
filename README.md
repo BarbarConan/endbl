@@ -1,0 +1,1 @@
+Empty template layout for [React](https://facebook.github.io/react/).
