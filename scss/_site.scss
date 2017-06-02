@@ -62,16 +62,25 @@ a {
     flex: 1 1 0px;
     text-align: right;
 }
+
 .teaser {
     background: url(/img/header.jpg) no-repeat center / cover;
-    padding: rem-calc(20);
+    padding: rem-calc(80 20);
 }
 .teaser-text{
     background: rgba($black, .6);
     color: $white;
     max-width: $global-width;
     margin: auto;
+    text-align: center;
+    padding: rem-calc(30 10);
 
 }
-.tst-line-1{}
-.tst-line-2{}
+.tst-line-1{
+    font-size: rem-calc(75);
+    font-weight: 900;
+    line-height: 1.2;
+}
+.tst-line-2{
+    font-size: rem-calc(40)
+}
