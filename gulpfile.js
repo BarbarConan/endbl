@@ -32,7 +32,10 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions', 'ie >= 11']
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('default', ['sass', 'browser-sync'], function() {
