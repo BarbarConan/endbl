@@ -7,6 +7,11 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    font-size: rem-calc(38);
+    margin: rem-calc(0 0 20);
+}
+
 .top-bar {
     display: flex;
     background: $black;
@@ -80,6 +85,7 @@ a {
     font-size: rem-calc(75);
     font-weight: 900;
     line-height: 1.2;
+    margin: 0;
 }
 .tst-line-2{
     font-size: rem-calc(40)
