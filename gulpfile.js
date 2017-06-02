@@ -1,3 +1,8 @@
+/*
+  To use Gulp is becoming to too old fashion. Webpack is growing faster. but for the simplicty let`s use Gulp for now.
+  But I promise my next projects will be in Webpack!
+*/
+
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
@@ -15,7 +20,8 @@ gulp.task('browser-sync', function() {
 var sassPaths = [
   'bower_components/normalize.scss/sass',
   'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+  'bower_components/motion-ui/src',
+  'bower_components/font-awesome/scss'
 ];
 
 gulp.task('sass', function() {
@@ -23,7 +29,7 @@ gulp.task('sass', function() {
   .pipe(sourcemaps.init({loadMaps: true}))    
     .pipe($.sass({
       includePaths: sassPaths,
-      outputStyle: 'compressed' // if css compressed **file size**
+      outputStyle: 'compressed'
     })
     
       .on('error', $.sass.logError))
