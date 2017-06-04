@@ -80,12 +80,17 @@
               <textarea placeholder="Type here your motivation"></textarea>
             </div>
             <div class="column medium-6 small-12">
-              <h3>Attach your documents (pdf, doc(x), jpg max 4mb)</h3>
-              Resume
-              <label for="Resume">Upload
-                <input type="file">
-              </label>
-              <button>Dropbox</button>
+              <h3>Attach your documents <small>(pdf, doc(x), jpg max 4mb)</small></h3>
+              <div class="row">
+                <div class="column align-self-middle">
+                  Resume
+                </div>
+                <div class="column">
+                  <label for="FileUpload" class="button"><i class="fa fa-desktop"></i> Upload</label>
+                  <input type="file" id="FileUpload" class="show-for-sr">
+                  <button type="button" class="button"><i class="fa fa-dropbox"></i> Dropbox</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -98,7 +103,7 @@
                 <input type="checkbox">
                 Send me a copy
               </label>
-              <button type="submit">APPLY FOR THIS JOB</button>
+              <button type="submit" class="button expanded">APPLY FOR THIS JOB</button>
             </div>
           </div>
 

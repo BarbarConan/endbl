@@ -8,9 +8,37 @@ a {
     color: #c4c4c4;
 }
 
+input:not([type="checkbox"],[type="radio"]), textarea {
+    display: block;
+    width: 100%;
+    margin: rem-calc(0 0 20);
+    padding: rem-calc(10);
+    color: $black;
+    appearance: none;   
+    border: 1px solid $light-gray;
+    box-shadow: 0 0 5px rgba($white, 0);
+    transition: box-shadow .5s, border-color .25s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 2px rgba($medium-gray, .5);
+        border-color: darken($light-gray, 5%);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: lighten($dark-gray, 13%);
+        box-shadow: 0 0 7px $medium-gray;
+    }
+
+    &::placeholder {
+        color: $light-gray;
+    }
+}
+
 textarea {
     resize: vertical;
     max-height: rem-calc(500);
+    min-height: rem-calc(200);
 }
 
 h2 {
@@ -54,12 +82,15 @@ h2 {
 .top-bar-search {
     margin-left: 10%;
     position: relative;
-       flex: 1 1 0px;
+    flex: 1 1 0px;
+
     input {
         width: 100%;
         font-size: rem-calc(14);
-        padding: rem-calc(10 20)
+        padding: rem-calc(10 20);
+        margin: 0;
     }
+
     button {
         position: absolute;
         top: 50%;
@@ -95,4 +126,22 @@ h2 {
 }
 .tst-line-2{
     font-size: rem-calc(40)
+}
+
+.form-content {
+    margin: rem-calc(70 0);
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: rem-calc(10 0);
+    padding: rem-calc(10 15);
+    border: 1px solid transparent;
+    border-radius: 0;
+    line-height: 1;
+    background-color: $primary-color;
+    text-align: center;
+    transition: background-color .35s ease-out;
+    color: $white;    
 }

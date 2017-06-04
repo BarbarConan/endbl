@@ -60,8 +60,8 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #000;
-$white: darken(#fff, 3%);
-$body-background: $white;
+$white: #fff;
+$body-background: darken($white, 3%);
 $body-font-color: $black;
 $base-font-family: 'Lato', sans-serif;
 $body-font-family: $base-font-family;
@@ -97,7 +97,7 @@ $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
   small: 10px,
-  medium: 20px,
+  medium: 35px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
