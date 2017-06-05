@@ -29,7 +29,7 @@
       </div>
       <div class="top-bar-search">
         <input type="search" placeholder="SEARCH FOR JOBS BY KEYWORD">
-        <button type="button" class="button"><i class="fa fa-search"></i><span class="show-for-sr">Search</span></button>
+        <button type="button"><i class="fa fa-search"></i><span class="show-for-sr">Search</span></button>
       </div>
       <div class="top-bar-basket">
         <span class="fa fa-shopping-bag"></span>
@@ -82,28 +82,72 @@
             <div class="column medium-6 small-12">
               <h3>Attach your documents <small>(pdf, doc(x), jpg max 4mb)</small></h3>
               <div class="row">
-                <div class="column align-self-middle">
+                <div class="column medium-4 align-self-middle">
                   Resume
                 </div>
                 <div class="column">
-                  <label for="FileUpload" class="button"><i class="fa fa-desktop"></i> Upload</label>
-                  <input type="file" id="FileUpload" class="show-for-sr">
-                  <button type="button" class="button"><i class="fa fa-dropbox"></i> Dropbox</button>
+                  <div class="row">
+                    <div class="column">
+                      <label for="FileUpload" class="button expanded"><i class="fa fa-desktop"></i> UPLOAD</label>
+                      <input type="file" id="FileUpload" class="show-for-sr">
+                    </div>
+                    <div class="column">
+                      <button type="button" class="button expanded"><i class="fa fa-dropbox"></i> DROPBOX</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column medium-4 align-self-middle">
+                  Resume
+                </div>
+                <div class="column">
+                  <div class="row">
+                    <div class="column">
+                      <label for="FileUpload" class="button expanded"><i class="fa fa-desktop"></i> UPLOAD</label>
+                      <input type="file" id="FileUpload" class="show-for-sr">
+                    </div>
+                    <div class="column">
+                      <button type="button" class="button expanded"><i class="fa fa-dropbox"></i> DROPBOX</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column medium-4 align-self-middle">
+                  Resume
+                </div>
+                <div class="column">
+                  <div class="row">
+                    <div class="column">
+                      <label for="FileUpload" class="button expanded"><i class="fa fa-desktop"></i> UPLOAD</label>
+                      <input type="file" id="FileUpload" class="show-for-sr">
+                    </div>
+                    <div class="column">
+                      <button type="button" class="button expanded"><i class="fa fa-dropbox"></i> DROPBOX</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row align-middle">
             <div class="column medium-6 small-12">
-              <a href="#">Back to job description</a>
+              <a href="#"><i class="fa fa-chevron-left"></i> Back to job description</a>
             </div>
             <div class="column medium-6 small-12">
-              <label>
-                <input type="checkbox">
-                Send me a copy
-              </label>
-              <button type="submit" class="button expanded">APPLY FOR THIS JOB</button>
+              <div class="row">
+                <div class="column medium-4 align-self-middle">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    Send me a copy
+                  </label>
+                </div>
+                <div class="column">
+                  <button type="submit" class="button expanded">APPLY FOR THIS JOB</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -112,30 +156,34 @@
     </div>
   </section>
 
-  <section>
-    <div>
-      <h3>Application procedure</h3>
-      <ul>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </li>
-      </ul>
+  <section class="procedure">
+    <div class="">
+      <div class="p-content-wrapper row small-up-1 medium-up-2 align-center">
+        <div class="column">
+          <h3>APPLICATION PROCEDURE</h3>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </li>
+          </ul>
+          <a href="#">Continue reading</a>
+        </div>
+        <div class="column">
+          <h3>GOT A QUESTION</h3>
+          <p>
+            Please contact recruitment
+          </p>
+          T. <a href="tel:+312012345678">+31 20 123 456 78</a>
+          <br> Or <a href="mailto:info@endouble.com">send us an email</a>
+        </div>
+      </div>
     </div>
-    <div>
-      <h3>Application procedure</h3>
-      <p>
-        Please contact recruitment
-      </p>
-      T. <a href="tel:+310009999444"></a>
-      <br> Or <a href="mailto:info@endouble.com">send us an email</a>
-    </div>
-    <a href="#">Continue reading</a>
   </section>
 
   <footer>
@@ -179,7 +227,7 @@
     </div>
   </footer>
 
-  <button>BACK TO TOP</button>
+  <button type="button" id="ScrollTop" class="scrollTop" aria-hidden="true">BACK TO TOP</button>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/what-input/dist/what-input.js"></script>
