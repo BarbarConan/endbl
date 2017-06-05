@@ -48,6 +48,17 @@ textarea {
 h2 {
     font-size: rem-calc(38);
     margin: rem-calc(0 0 20);
+
+    @include breakpoint(medium down) {
+        font-size: rem-calc(18);
+        margin: rem-calc(0 0 16);
+    }
+}
+
+h3 {
+    @include breakpoint(medium down) {
+        font-size: rem-calc(14);        
+    }
 }
 
 .top-bar {
@@ -112,6 +123,10 @@ h2 {
 .teaser {
     background: url(/img/header.jpg) no-repeat center / cover;
     padding: rem-calc(80 20);
+
+    @include breakpoint(medium down) {
+        padding: rem-calc(5);    
+    }
 }
 .teaser-text{
     background: rgba($black, .6);
@@ -121,19 +136,36 @@ h2 {
     text-align: center;
     padding: rem-calc(30 10);
 
+    @include breakpoint(medium down) {
+        padding: rem-calc(15 7);    
+    }
 }
+
 .tst-line-1{
     font-size: rem-calc(75);
     font-weight: 900;
     line-height: 1.2;
     margin: 0;
+
+    @include breakpoint(medium down) {
+        font-size: rem-calc(20);
+    }
 }
+
 .tst-line-2{
-    font-size: rem-calc(40)
+    font-size: rem-calc(40);
+
+    @include breakpoint(medium down) {
+        font-size: rem-calc(16);    
+    }
 }
 
 .form-content {
     margin: rem-calc(70 0);
+    
+    @include breakpoint(medium down) {
+        margin: rem-calc(20 0);    
+    }
 }
 
 .button {
@@ -152,6 +184,12 @@ h2 {
     &.expanded {
         display: block;
         width: 100%;
+    }
+
+    @include breakpoint(medium down) {
+        font-size: rem-calc(14);
+        margin: rem-calc(8 0);
+        padding: rem-calc(8 5);
     }
 }
 
@@ -194,4 +232,22 @@ h2 {
 footer {
     margin: rem-calc(20 0);
     font-size: rem-calc(14);
+}
+
+.req-input-wrapper {
+    position: relative;
+
+    i.fa-times, i.fa-check {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+    }
+
+    i.fa-times {            
+        color: $alert-color;
+    }
+
+    i.fa-check {
+        color: $success-color;
+    }
 }

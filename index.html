@@ -48,36 +48,46 @@
   <section class="form-content">
     <div class="row">
       <div class="column small-12">
-        <h2 class="">APPLY FOR THE POSITION OF PURCHASING ASSISTANT</h2>
+        <h2>APPLY FOR THE POSITION OF PURCHASING ASSISTANT</h2>
       </div>
       <div class="column small-12">
         <h3>Personal details *</h3>
-        <form>
+        <form id="jobForm" class="form-actions">
           <div class="row">
             <div class="column medium-6 small-12">
-              <input type="text" placeholder="Name">
+              <div class="req-input-wrapper">
+                <input type="text" placeholder="Name" data-validator="min_length" data-min-length="3" required>
+              </div>
             </div>
             <div class="column medium-6 small-12">
-              <input type="text" placeholder="Surname">
+              <div class="req-input-wrapper">
+                <input type="text" placeholder="Surname" data-validator="min_length" data-min-length="3" required>
+              </div>
             </div>
             <div class="column medium-6 small-12">
-              <input type="text" placeholder="Country">
+              <input type="text" placeholder="Country" data-abide-ignore>
             </div>
             <div class="column medium-6 small-12">
-              <input type="text" placeholder="City">
+              <input type="text" placeholder="City" data-abide-ignore>
             </div>
             <div class="column medium-6 small-12">
-              <input type="email" placeholder="Email">
+              <div class="req-input-wrapper">
+                <input type="email" placeholder="Email" required>
+              </div>
             </div>
             <div class="column medium-6 small-12">
-              <input type="tel" placeholder="Phone">
+              <div class="req-input-wrapper">
+                <input type="tel" placeholder="Phone" required pattern="number">
+              </div>
             </div>
           </div>
 
           <div class="row">
             <div class="column medium-6 small-12">
               <h3>Your Motivation *</h3>
-              <textarea placeholder="Type here your motivation"></textarea>
+              <div class="req-input-wrapper">
+                <textarea placeholder="Type here your motivation"></textarea>
+              </div>
             </div>
             <div class="column medium-6 small-12">
               <h3>Attach your documents <small>(pdf, doc(x), jpg max 4mb)</small></h3>
