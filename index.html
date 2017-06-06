@@ -12,12 +12,13 @@
 </head>
 
 <body>
-  <header>
+  <header class="js-mobile-toggle-target">
+    <button class="hambuger-menu" id="ToggleMobileMenu" type="button"><span class="show-for-sr">mobile menu toggle</span></button>
     <div class="top-bar align-middle">
       <div class="top-bar-logo">
         <a href="#">LOGO</a>
       </div>
-      <div class="top-bar-nav">
+      <div class="top-bar-nav js-clone">
         <nav>
           <ul>
             <li><a href="#">HOME</a></li>
@@ -27,11 +28,11 @@
           </ul>
         </nav>
       </div>
-      <div class="top-bar-search">
+      <div class="top-bar-search js-clone">
         <input type="search" placeholder="SEARCH FOR JOBS BY KEYWORD">
         <button type="button"><i class="fa fa-search"></i><span class="show-for-sr">Search</span></button>
       </div>
-      <div class="top-bar-basket">
+      <div class="top-bar-basket js-clone">
         <span class="fa fa-shopping-bag"></span>
         <span class="top-bar-basket-count">1</span>
       </div>

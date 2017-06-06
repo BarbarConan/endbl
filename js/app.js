@@ -52,3 +52,10 @@ $Form.$inputs.on("input", function() {
     $icon.addClass("fa-times").removeClass("fa-check");
   }
 });
+
+var mobileMenuElems = $('.js-clone').clone();
+$('<div />', { 'class': 'mobile-menu-wrapper' }).html(mobileMenuElems).appendTo('.js-mobile-toggle-target');
+
+$('button#ToggleMobileMenu').on('click', function () {
+  $('.js-mobile-toggle-target').toggleClass('mobile-is-on');
+ });

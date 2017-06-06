@@ -12,7 +12,7 @@ a {
     }
 }
 
-input[type="text"], [type="search"], [type="email"], ,[type="tel"], textarea {
+input[type="text"], [type="search"], [type="email"], [type="tel"], textarea {
     display: block;
     width: 100%;
     margin: rem-calc(0 0 20);
@@ -45,6 +45,10 @@ textarea {
     min-height: rem-calc(166);
 }
 
+header {
+    position: relative;
+}
+
 h2 {
     font-size: rem-calc(38);
     margin: rem-calc(0 0 20);
@@ -61,6 +65,12 @@ h3 {
     }
 }
 
+%hide-for-mobile {
+    @include breakpoint(medium down) {
+        display: none;
+    }
+}
+
 .top-bar {
     display: flex;
     background: $black;
@@ -74,12 +84,18 @@ h3 {
 
 .top-bar-logo {
     padding-right: rem-calc(50);
-    font-size: rem-calc(50);    
+    font-size: rem-calc(50);
+
+    @include breakpoint(medium down) {
+        font-size: rem-calc(35);
+    }
 }
 
 .top-bar-nav {
     padding: rem-calc(10 0);
-    ul{
+    @extend %hide-for-mobile;
+
+    ul {
         @include clearfix();
         > li {
             float: left;
@@ -87,17 +103,20 @@ h3 {
         }
     }
 
-    a{
+    a {
         &.current {
            border-bottom: 1px solid $white;
         }
     }
+
 }
 
 .top-bar-search {
     margin-left: 10%;
     position: relative;
     flex: 1 1 0px;
+    
+    @extend %hide-for-mobile;
 
     input {
         width: 100%;
@@ -118,6 +137,7 @@ h3 {
 .top-bar-basket {
     flex: 1 1 0px;
     text-align: right;
+    @extend %hide-for-mobile;
 }
 
 .teaser {
@@ -249,5 +269,67 @@ footer {
 
     i.fa-check {
         color: $success-color;
+    }
+}
+
+.hambuger-menu {
+    position: absolute;
+    font-size: rem-calc(22);
+    color: $white;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    @include breakpoint(medium up) {
+        display: none;
+    }
+    
+    &:after {
+        @include fa-icon();
+        content: $fa-var-bars;
+    }
+}
+
+.mobile-menu-wrapper {
+    display: none;
+
+    background: $black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    padding: rem-calc(18);
+    z-index: 2;
+
+    .top-bar-nav  {
+        ul {
+            > li {
+                float: none;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    .top-bar-search {
+        margin: rem-calc(20 0);
+    }
+
+    .top-bar-basket {
+        text-align: center;
+        color: white;
+    }
+
+    .top-bar-nav, .top-bar-search, .top-bar-basket {
+        display: block;   
+    }
+}
+
+.mobile-is-on {
+    
+    @include breakpoint(medium down) {
+        .mobile-menu-wrapper {
+            display: block;
+        }
     }
 }
